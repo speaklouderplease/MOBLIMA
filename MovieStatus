@@ -1,7 +1,0 @@
-public class MovieStatus{
-    enum STATUS{
-        PREVIEW,
-        NOW SHOWING,
-        COMING SOON
-    }
-}
