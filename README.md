@@ -18,7 +18,7 @@ goers and cinema staff.
 - View booking history
 - List the Top 5 ranking by ticket sales OR by overall reviewers’ ratings
 
-##### Suggested Test cases
+##### Special scenarios
 - configuring a holiday date and the ticket price is shown correctly when
 booking is done on that date
 - booking on a different day of the week or holiday and type of cinema (eg
