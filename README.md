@@ -26,3 +26,7 @@ suite to demonstrate the differences in prices
 - configuring “End of Showing” date and the movie should not be listed for
 booking
 - booking only allowed for “Preview” and “Now Showing” status.
+
+
+Report
+https://docs.google.com/document/d/1mFtcWWyKjnIt-P3WChLilIud6iN8iO1GSYjNRmzgCBA/edit?usp=sharing
