@@ -1,3 +1,3 @@
 package enums;
 
-public enum Days{
+public enum Days{MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY,SUNDAY,HOLIDAY}
