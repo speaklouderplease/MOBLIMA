@@ -16,7 +16,7 @@ public class Bookingtest {
     static String movieBooking(){
         int choice = 0;
         String buff = "\0";
-        String screening = "Screening.txt";
+        //String screening = "Screening.txt";
 		// // try{
 		// // ArrayList<String> bookRecord = BookingRecord.readBooking(screening);
 		// for(int i=0;i<bookRecord.size();i++){
@@ -127,12 +127,12 @@ public class Bookingtest {
 		System.out.println("The booking was made on " + current.toString());
 		buff = pickedcal.getTime().toString();
 		buff = buff.replaceAll("\\s","");
-		// // bookRecord.add(buff);
-		// // BookingRecord.saveBooking(screening,bookRecord);
-		// // picker.close();
-		// // }catch(IOException e){
-		// System.out.println(e.getMessage());
-		// }
+        picker.close();
+		//bookRecord.add(buff);
+		//BookingRecord.saveBooking(screening,bookRecord);
+		//}catch(IOException e){
+		//System.out.println(e.getMessage());
+		//}
         return buff;
     }
 }
