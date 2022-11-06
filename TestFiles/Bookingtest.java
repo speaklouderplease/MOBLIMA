@@ -16,7 +16,7 @@ public class Bookingtest {
     static String movieBooking(){
         int choice = 0;
         String buff = "\0";
-        //String screening = "Screening.txt";
+        //String screening = "record.txt";
 		// // try{
 		// // ArrayList<String> bookRecord = BookingRecord.readBooking(screening);
 		// for(int i=0;i<bookRecord.size();i++){
