@@ -36,12 +36,13 @@ public class Reviews {
     /**
      * calculates the average rating by taking the mean of all the ratings stored
      */
-    public void setReview(){
+    public float setReview(){
         float sum = 0;
         for(float i: allRatings){
             sum += i;
         }
         rating = sum/allRatings.size();
+        return rating;
     }
 
 }
