@@ -1,4 +1,4 @@
 package enums;
 
-public enums UserType 
+public enum UserType 
 {MOVIEGOER,CINEMASTAFF}
