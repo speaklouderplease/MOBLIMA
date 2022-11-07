@@ -1,7 +1,8 @@
-public class MovieStatus{
-    enum STATUS{
+package enums;
+
+public enum MovieStatus{
         PREVIEW,
         NOWSHOWING,
         COMINGSOON
     }
-}
+

@@ -1,3 +1,4 @@
+import enums.MovieStatus;
 import java.util.ArrayList;
 
 public class Movies{
@@ -8,6 +9,7 @@ public class Movies{
     private String synopsis;
     private ArrayList<String> allReviews;
     private ArrayList<Float> allRatings;
+    public MovieStatus currentstatus;
 
     /**
      * 
@@ -59,5 +61,6 @@ public class Movies{
         System.out.println("Rating: " + rating);
         System.out.println("<-------Summary------->");
         System.out.println(getSynopsis());
+        System.out.println(currentstatus);
     }
 }

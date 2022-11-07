@@ -10,10 +10,11 @@ public class Person{
   
   //methods
   
-  public String getlastName(){
-    return this.firstName
+  public String getFirstName(){
+    return this.firstName;
   }
   
   public String getlastName(){
-    return this.lastName
-    }
+    return this.lastName;
+  }
+}

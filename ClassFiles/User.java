@@ -19,11 +19,11 @@ public class User extends Person{
   }
     
   public void setUserType(UserType usertype){
-    this.UserType = usertype;
+    this.usertype = usertype;
   }
 
     public UserType getUserType(){
-    return this.UserType;
+    return this.usertype;
   }
   //methods
   
@@ -32,4 +32,4 @@ public class User extends Person{
     this.username = firstName + lastName;
     this.password = "11111"; //default password
     }
-  
+}
