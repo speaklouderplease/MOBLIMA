@@ -18,9 +18,9 @@ public class Movies{
      * @param cast
      * @param rating
      * @param synopsis
-     * Constructor for movie
+     * Constructor for Movies object
      */
-    public Movies(String title,String director,String cast,float rating,String synopsis){
+    public Movies(String title,String director,String cast,float rating,String synopsis,MovieStatus currentstatus){
         MovieTitle = title;
         Director = director;
         Cast = cast;
@@ -30,6 +30,7 @@ public class Movies{
         allRatings = new ArrayList<Float>();        
         allRatings.add(0.0f);
         allReviews.add("Met my expectations!");
+        this.currentstatus = currentstatus;
     }
 
     /** 

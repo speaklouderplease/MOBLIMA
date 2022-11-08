@@ -2,12 +2,10 @@
 //import java.util.Date;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
-//import java.util.ArrayList;
-//import java.util.Scanner;
 /**
  * @version 1.0
  * @author Justin
- * Displays the screentimes for the Movie object.
+ * Display the screentimes.
  */
 public class Screening {
     static void showScreenings(){
