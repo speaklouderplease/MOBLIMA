@@ -9,9 +9,9 @@ public class Movies{
     private String synopsis;
     private ArrayList<String> allReviews;
     private ArrayList<Float> allRatings;
+    private ArrayList<Integer> ScreenTimes;
     public MovieStatus currentstatus;
-    private String ScreenTimes;
-
+    
     /**
      * 
      * @param title
@@ -30,16 +30,26 @@ public class Movies{
         allReviews = new ArrayList<String>();
         allRatings = new ArrayList<Float>();        
         allRatings.add(0.0f);
+        allRatings.add(2.0f);
         allReviews.add("Met my expectations!");
+        ScreenTimes.add(10);
+        ScreenTimes.add(13);
+        ScreenTimes.add(15);
+        ScreenTimes.add(17);
+        ScreenTimes.add(19);
+        ScreenTimes.add(22);
         this.currentstatus = currentstatus;
     }
 
-    public String getScreentime(){
-        return ScreenTimes;
+    public void getScreenTime(){
+        System.out.println("Avaliable showtimes: ");
+        for(int i:ScreenTimes){
+            System.out.println(i+":00");
+        }
     }
 
-    public void setScreenTime(String timings){
-        ScreenTimes = timings;
+    public void setScreenTime(int timings){
+        ScreenTimes.add(timings);
     }
 
     /** 

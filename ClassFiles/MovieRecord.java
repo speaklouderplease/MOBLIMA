@@ -15,7 +15,7 @@ public class MovieRecord {
 	public static ArrayList readMovies(String filename) throws IOException {
 		// read String from text file
 		ArrayList stringArray = (ArrayList)read(filename);
-		ArrayList alr = new ArrayList() ;// to store Movie data
+		ArrayList<Movies> alr = new ArrayList<Movies>() ;// to store Movie data
 
         for (int i = 0 ; i < stringArray.size() ; i++) {
 				String st = (String)stringArray.get(i);
@@ -24,12 +24,12 @@ public class MovieRecord {
 
 				String  title = star.nextToken().trim();	
 				String  direct = star.nextToken().trim();	
-                String cast = star.nextToken().trim();
+        String cast = star.nextToken().trim();
 				float rating = Float.parseFloat(star.nextToken().trim());
-                String synopsis = star.nextToken().trim();
+        String synopsis = star.nextToken().trim();
 				String currentstatusString = star.nextToken().trim();
-                MovieStatus currentstatus = MovieStatus.valueOf(currentstatusString);
-                Movies film = new Movies(title,direct,cast,rating,synopsis,currentstatus);
+        MovieStatus currentstatus = MovieStatus.valueOf(currentstatusString);
+        Movies film = new Movies(title,direct,cast,rating,synopsis,currentstatus);
 				// add to Movies list
 				alr.add(film) ;
 			}
@@ -38,7 +38,7 @@ public class MovieRecord {
 
   // saving
 public static void saveMovies(String filename, List al) throws IOException {
-		List alw = new ArrayList() ;// to store movies data
+		List<String> alw = new ArrayList<String>() ;// to store movies data
 
         for (int i = 0 ; i < al.size() ; i++) {
 				Movies films = (Movies)al.get(i);
@@ -48,12 +48,12 @@ public static void saveMovies(String filename, List al) throws IOException {
 				st.append(films.Director.trim());
 				st.append(SEPARATOR);
 				st.append(films.Cast.trim());
-                st.append(SEPARATOR);
-                st.append(films.rating);
-                st.append(SEPARATOR);
-                st.append(films.getSynopsis().trim());
-                st.append(SEPARATOR);
-                st.append(films.currentstatus.toString().trim());
+        st.append(SEPARATOR);
+        st.append(films.rating);
+        st.append(SEPARATOR);
+        st.append(films.getSynopsis().trim());
+        st.append(SEPARATOR);
+        st.append(films.currentstatus.toString().trim());
 				alw.add(st.toString()) ;
 			}
 			write(filename,alw);
@@ -75,7 +75,7 @@ public static void saveMovies(String filename, List al) throws IOException {
 
   /** Read the contents of the given file. */
   public static List read(String fileName) throws IOException {
-	List data = new ArrayList() ;
+	List<String> data = new ArrayList<String>() ;
     Scanner scanner = new Scanner(new FileInputStream(fileName));
     try {
       while (scanner.hasNextLine()){

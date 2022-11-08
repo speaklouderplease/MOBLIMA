@@ -13,7 +13,7 @@ public class CinemaStaff{
      * @param rating
      * @param synopsis
      * @param currentstatus
-     * Reads the avaliable movies into an ArrayList and adds the movie into the list.
+     * Reads the avaliable movies into an ArrayList and adds the new movie into the list.
      */
     public void addMovie(String title,String director,String cast,float rating,String synopsis,MovieStatus currentstatus){
         String filename = "MoviesCatalogue.txt";
@@ -75,9 +75,7 @@ public class CinemaStaff{
         }
     }
 
-
     /**
-     * 
      * @param Title
      * @param newCast
      * Change the cast of the movie
@@ -103,9 +101,9 @@ public class CinemaStaff{
     /** 
      * @param Title
      * @param times
-     * Change the avaliable screenings of the movie
+     * Change the avaliable screenings of the movies which are in the database
      */
-    public void updateScreenings(String Title, String times){
+    public void updateScreenings(String Title, int times){
         String filename = "MoviesCatalogue.txt";
         try{
             ArrayList filmlist = MovieRecord.readMovies(filename);
