@@ -98,4 +98,28 @@ public class CinemaStaff{
             System.out.println(f.getMessage());
         }
     }
+
+    
+    /** 
+     * @param Title
+     * @param times
+     * Change the avaliable screenings of the movie
+     */
+    public void updateScreenings(String Title, String times){
+        String filename = "MoviesCatalogue.txt";
+        try{
+            ArrayList filmlist = MovieRecord.readMovies(filename);
+            for(int i=0;i<filmlist.size();i++){
+                Movies changedFilm = (Movies)filmlist.get(i);
+                if(changedFilm.MovieTitle.equalsIgnoreCase(Title)){ //Checks the titles to see if any match
+                    changedFilm.setScreenTime(times);
+                    System.out.println(changedFilm.MovieTitle + " has its screentimes changed successfully. See you again");
+                }
+            }
+            MovieRecord.saveMovies(filename,filmlist); //save the text file after the movie has been removed
+        }catch(IOException f){
+            System.out.println(f.getMessage());
+        }
+    }
 }
+

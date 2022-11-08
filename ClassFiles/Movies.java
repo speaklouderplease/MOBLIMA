@@ -10,6 +10,7 @@ public class Movies{
     private ArrayList<String> allReviews;
     private ArrayList<Float> allRatings;
     public MovieStatus currentstatus;
+    private String ScreenTimes;
 
     /**
      * 
@@ -31,6 +32,14 @@ public class Movies{
         allRatings.add(0.0f);
         allReviews.add("Met my expectations!");
         this.currentstatus = currentstatus;
+    }
+
+    public String getScreentime(){
+        return ScreenTimes;
+    }
+
+    public void setScreenTime(String timings){
+        ScreenTimes = timings;
     }
 
     /** 
