@@ -1,22 +1,31 @@
-import enums.AgeGroup
-import enums.Day
-  
+import enums.AgeGroup;
+import enums.Days;
+import enums.CinemaType;
   
   
 public class Pricing{
 //method to get price of 1 ticket
-//maybe method should change to getprice of all ticket member, not 1 by 1
-  public double getPrice(Day day,AgeGroup age){
+//maybe method should change to getprice of all ticket member, not 1 by 1 
+//Justin's note: I think its fine. Easier to just call one by one. Also need to add CinemaType
+/**
+ * 
+ * @param day
+ * @param age
+ * @return finalprice
+ */
+  public double getPrice(Days day,AgeGroup age,CinemaType cinema){
     double normalPrice = 8;
     double finalPrice = 0;
    //if day = fri sat sun holi, plus extra
-   if (day == Day.FRIDAY || day == day.
-    
+   if (day == Days.FRIDAY || day == Days.SATURDAY || day == Days.SUNDAY){
+
+   }    
     
    //if senior / child, discount
    if (age == AgeGroup.SENIOR || age == AgeGroup.CHILD){
-    finalPrice = 
-
+    finalPrice = 8*0.2;
+   }
   
-  return finalPrice;
+    return finalPrice;
   }
+}
