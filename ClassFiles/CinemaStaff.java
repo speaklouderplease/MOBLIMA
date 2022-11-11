@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.io.IOException;
 import enums.MovieStatus;
+import java.util.Collections;
 /**
  * Required classes: MovieRecord,Movies,MovieStatus
  */
@@ -104,18 +106,48 @@ public class CinemaStaff{
      * Change the avaliable screenings of the movies which are in the database
      */
     public void updateScreenings(String Title, int times){
-        String filename = "MoviesCatalogue.txt";
         try{
+            String filename = "MoviesCatalogue.txt";
+            List jikan = (ArrayList)serializer.readSerializedObject("timings.dat");
             ArrayList filmlist = MovieRecord.readMovies(filename);
             for(int i=0;i<filmlist.size();i++){
                 Movies changedFilm = (Movies)filmlist.get(i);
                 if(changedFilm.MovieTitle.equalsIgnoreCase(Title)){ //Checks the titles to see if any match
-                    changedFilm.setScreenTime(times);
+                    jikan.add(times);
+                    Collections.sort(jikan);
+                    serializer.writeSerializedObject("timings.dat",jikan);
                     System.out.println(changedFilm.MovieTitle + " has its screentimes changed successfully. See you again");
-                }
+                    break;
+                }              
             }
-            MovieRecord.saveMovies(filename,filmlist); //save the text file after the movie has been removed
-        }catch(IOException f){
+        }catch(Exception f){
+            System.out.println(f.getMessage());
+        }
+    }
+
+
+    
+    /** 
+     * @param Title
+     * @param time
+     * change the avaliable screenings of the movies
+     */
+    public void removeScreening(String Title, int time){
+        try{
+            String filename = "MoviesCatalogue.txt";
+            List jikan = (ArrayList)serializer.readSerializedObject("timings.dat");
+            ArrayList filmlist = MovieRecord.readMovies(filename);
+            for(int i=0;i<filmlist.size();i++){
+                Movies changedFilm = (Movies)filmlist.get(i);
+                if(changedFilm.MovieTitle.equalsIgnoreCase(Title)){ //Checks the titles to see if any match
+                    jikan.remove(Integer.valueOf(time));
+                    Collections.sort(jikan);
+                    serializer.writeSerializedObject("timings.dat",jikan);
+                    System.out.println(changedFilm.MovieTitle + " has its screentimes changed successfully. See you again");
+                    break;
+                }              
+            }
+        }catch(Exception f){
             System.out.println(f.getMessage());
         }
     }

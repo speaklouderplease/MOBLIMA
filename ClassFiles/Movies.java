@@ -11,7 +11,11 @@ public class Movies{
     private ArrayList<Float> allRatings;
     private ArrayList<Integer> ScreenTimes;
     public MovieStatus currentstatus;
-    
+
+    /**
+     * Default constructor
+     */
+    public Movies(){};
     /**
      * 
      * @param title
@@ -32,16 +36,12 @@ public class Movies{
         allRatings.add(0.0f);
         allRatings.add(2.0f);
         allReviews.add("Met my expectations!");
-        ScreenTimes.add(10);
-        ScreenTimes.add(13);
-        ScreenTimes.add(15);
-        ScreenTimes.add(17);
-        ScreenTimes.add(19);
-        ScreenTimes.add(22);
+        ScreenTimes = (ArrayList<Integer>)serializer.readSerializedObject("timings.dat");
         this.currentstatus = currentstatus;
     }
 
     public void getScreenTime(){
+        ScreenTimes = (ArrayList<Integer>)serializer.readSerializedObject("timings.dat");
         System.out.println("Avaliable showtimes: ");
         for(int i:ScreenTimes){
             System.out.println(i+":00");
