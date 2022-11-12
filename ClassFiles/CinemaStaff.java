@@ -3,11 +3,48 @@ import java.util.List;
 import java.io.IOException;
 import enums.MovieStatus;
 import java.util.Collections;
+import enums.UserType;
+import java.io.File;
 /**
  * Required classes: MovieRecord,Movies,MovieStatus
  */
-public class CinemaStaff{
+public class CinemaStaff extends User{
+    UserType CINEMASTAFF;
+    CinemaStaff(String firstname,String lastname){
+        super(firstname,lastname);
+
+    }
     
+    public void viewMovies(){
+        String filename = "MoviesCatalogue.txt";
+        try{
+            ArrayList filmlist = MovieRecord.readMovies(filename);
+				for (int i = 0 ; i < filmlist.size() ; i++) {
+					Movies c = (Movies)filmlist.get(i);
+					c.MovieInfo();
+				}
+            }catch(Exception d){
+                System.out.println(d.getMessage());
+            }
+    }
+
+    public void checkMovie(String Title){
+        Movies c = new Movies();
+        String filename = "MoviesCatalogue.txt";
+        try{
+        ArrayList filmlist = MovieRecord.readMovies(filename);
+				for (int i = 0 ; i < filmlist.size() ; i++) {
+					c = (Movies)filmlist.get(i);
+					if(c.MovieTitle.equalsIgnoreCase(Title)){
+                        break;
+                    }
+				}
+        c.MovieInfo();
+        c.getScreenTime();
+            }catch(IOException d){
+                System.out.println(d.getMessage());
+        }
+    }
     /** 
      * @param title
      * @param director
@@ -82,14 +119,14 @@ public class CinemaStaff{
      * @param newCast
      * Change the cast of the movie
      */
-    public void updateSynopsis(String Title, String newCast){
+    public void updateSynopsis(String Title, String newstory){
         String filename = "MoviesCatalogue.txt";
         try{
             ArrayList filmlist = MovieRecord.readMovies(filename);
             for(int i=0;i<filmlist.size();i++){
                 Movies changedFilm = (Movies)filmlist.get(i);
                 if(changedFilm.MovieTitle.equalsIgnoreCase(Title)){ //Checks the titles to see if any match
-                    changedFilm.Cast = newCast;
+                    changedFilm.setSynopsis(newstory);
                     System.out.println(changedFilm.MovieTitle + " has its cast members changed successfully. See you again");
                 }
             }

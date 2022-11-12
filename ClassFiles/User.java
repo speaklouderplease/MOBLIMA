@@ -22,8 +22,16 @@ public class User extends Person{
     this.usertype = usertype;
   }
 
-    public UserType getUserType(){
+  public UserType getUserType(){
     return this.usertype;
+  }
+
+  public String getUsername(){
+    return username;
+  }
+
+  public String getPw(){
+    return password;
   }
   //methods
   

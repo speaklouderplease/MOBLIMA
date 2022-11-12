@@ -59,6 +59,9 @@ public class Movies{
         return synopsis;
     }
     
+    public void setSynopsis(String p){
+        synopsis = p;
+    }
     /** 
      * @return provide the aggregate rating
      */
