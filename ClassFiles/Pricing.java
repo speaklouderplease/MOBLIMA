@@ -14,18 +14,18 @@ public class Pricing{
  * @return finalprice
  */
   public double getPrice(Days day,AgeGroup age,CinemaType cinema){
-    double normalPrice = 8;
+    
     double finalPrice = 0;
    //if day = fri sat sun holi, plus extra
    if (day == Days.FRIDAY || day == Days.SATURDAY || day == Days.SUNDAY){
-
+    finalPrice = finalPrice + 3;
    }    
     
    //if senior / child, discount
    if (age == AgeGroup.SENIOR || age == AgeGroup.CHILD){
-    finalPrice = 8*0.2;
+    finalPrice = finalPrice - 4;
    }
-  
+    
     return finalPrice;
   }
 }
