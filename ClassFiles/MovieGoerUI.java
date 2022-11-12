@@ -1,8 +1,8 @@
 import java.util.Scanner;
-import
+//import
   
   
 public class MovieGoerUI{
-  public stat
-    System.out.println(
-  
+// public stat;
+    //System.out.println(
+} 

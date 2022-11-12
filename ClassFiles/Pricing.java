@@ -13,7 +13,7 @@ public class Pricing{
  * @param age
  * @return finalprice
  */
-  public double getPrice(Days day,AgeGroup age,CinemaType cinema){
+  public static double getPrice(Days day,AgeGroup age,CinemaType cinema){
     
     double finalPrice = 0;
    //if day = fri sat sun holi, plus extra
