@@ -69,6 +69,16 @@ public class Movies{
         return rating;
     }
 
+    public void getReview(){
+        for(int i=0;i<allReviews.size();i++){
+            System.out.println(i+":"+allReviews.get(i));
+        }
+    }
+
+    public void setReview(String review){
+        allReviews.add(review);
+    }
+
     /**
      * Prints out the important information of the movie
      * - Movie Title
