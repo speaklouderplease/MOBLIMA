@@ -85,5 +85,6 @@ public class Movies{
         System.out.println("<-------Summary------->");
         System.out.println(getSynopsis());
         System.out.println(currentstatus);
+        System.out.println();
     }
 }

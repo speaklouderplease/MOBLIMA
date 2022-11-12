@@ -1,6 +1,7 @@
 
 public class MovieTicket{
   //members
+  private int cinemaID;
   private int ticketID;
   private int seatNumber;
   private int ticketPrice;

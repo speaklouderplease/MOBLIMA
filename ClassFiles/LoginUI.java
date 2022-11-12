@@ -17,7 +17,7 @@ public class LoginUI {
         System.out.println("Please login");
         a = Aobj.nextInt();
         switch(a){
-            case 1:
+            case 1: //For staff
                 CinemaStaff tempstaff = new CinemaStaff("Tom","Hanks");
                 System.out.println("username: ");
                 b = Bobj.nextLine();
@@ -27,10 +27,12 @@ public class LoginUI {
                     System.out.println("Give valid username and password");
                 }
                 else{
+                    System.out.println();
                     System.out.println("please continue!");
+                    StaffUI.StaffMain();
                 }
                 break;
-            case 2:
+            case 2: //For customer
                 System.out.println("hi there");
              }
             }while(a<0&&a>2);

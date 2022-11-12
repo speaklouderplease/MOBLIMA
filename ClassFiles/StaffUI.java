@@ -1,20 +1,25 @@
 import java.util.Scanner;
 import enums.MovieStatus;
 public class StaffUI {
-    public static void main(String args[]){
+    /**
+     * Allows the staff member to make changes to the system after login.
+     */
+    public static void StaffMain(){
         int choice =0;
         CinemaStaff staffone = new CinemaStaff("Tom","Hanks");
         Scanner picker = new Scanner(System.in);
-        do{
         System.out.println("Welcome " + staffone.getFirstName());
         System.out.println("What will be the agenda for today?");
+        do{
+        System.out.println("Avaliable options");       
         System.out.println("1. add a new film");
         System.out.println("2. remove a film from listing");
         System.out.println("3. add a new screening");
         System.out.println("4. remove a screening");
         System.out.println("5. change the status of a film");
-        System.out.println("6. change the synopsis of a film");
-        System.out.println("7. logout");		
+         System.out.println("6. change the synopsis of a film");
+        System.out.println("7. look up a movie");       
+        System.out.println("8. logout");		
 		choice = picker.nextInt();
 		switch(choice){
 			case 1:
@@ -78,7 +83,7 @@ public class StaffUI {
                 staffone.checkMovie(MOV);
                 System.out.println("The timing to remove: ");
                 Q1 = Q.nextInt();
-                staffone.updateScreenings(MOV, Q1);
+                staffone.removeScreening(MOV, Q1);
                 System.out.println("new details");
                 staffone.checkMovie(MOV);
 				break;
@@ -105,7 +110,7 @@ public class StaffUI {
                 }
                 staffone.checkMovie(eiga);
 				break;
-			case 6:
+			case 6://*if movie is invalid, checkMovie will flag it out */
 				String summary,dianying;
                 Scanner sum = new Scanner(System.in);
                 Scanner dian = new Scanner(System.in);
@@ -117,12 +122,20 @@ public class StaffUI {
                 staffone.checkMovie(dianying);
 				break;
             case 7:
+                System.out.println("What movie do you want to look up?");
+                String lookup;
+                Scanner lkobj = new Scanner(System.in);
+                lookup = lkobj.nextLine();
+                staffone.checkMovie(lookup);
+                break;
+            case 8:
                 System.out.println("See you again");
                 break;
 			default:
 				System.out.println("Please choose a valid task from the list");
 				break;
 		}
-		}while(choice!=7);
+		}while(choice!=8);
+    picker.close();
     }
 }

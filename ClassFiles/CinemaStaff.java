@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.io.IOException;
+import java.net.PasswordAuthentication;
+import java.util.Objects;
+
 import enums.MovieStatus;
 import java.util.Collections;
 import enums.UserType;
-import java.io.File;
 /**
  * Required classes: MovieRecord,Movies,MovieStatus
  */
@@ -12,7 +14,7 @@ public class CinemaStaff extends User{
     UserType CINEMASTAFF;
     CinemaStaff(String firstname,String lastname){
         super(firstname,lastname);
-
+        super.setPassword("qwerty12345");
     }
     
     public void viewMovies(){
@@ -38,9 +40,16 @@ public class CinemaStaff extends User{
 					if(c.MovieTitle.equalsIgnoreCase(Title)){
                         break;
                     }
+                    else{c=null;}
 				}
-        c.MovieInfo();
-        c.getScreenTime();
+                if(!Objects.isNull(c)){
+                    c.MovieInfo();
+                    c.getScreenTime();
+                }
+                else{
+                    System.out.println("No such movie exists");
+                }
+       
             }catch(IOException d){
                 System.out.println(d.getMessage());
         }
