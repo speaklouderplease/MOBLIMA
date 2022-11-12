@@ -25,13 +25,15 @@ public class MovieGoerUI{
         case 3:
           
         case 4:
-          
+          BookingUI.BookingMain();
         case 5:
           
         case 6:
           
         case 7:
           System.out.println("See you again.");
-            
-          
-          }while (choice != 7)
+          break;
+    }     
+    }while (choice != 7);
+    }
+} 

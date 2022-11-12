@@ -57,4 +57,4 @@ public class MovieGoer extends User{
   public AgeGroup getAgeGroup(){
     return this.ageGroup;
   }
-  
+}
