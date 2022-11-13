@@ -12,6 +12,7 @@ public class LoginUI {
         System.out.println("Are you a staff or customer?");
         System.out.println("1. staff");
         System.out.println("2. customer");
+        System.out.println("3. Logout");
 
         do{
         System.out.println("Please login");
@@ -33,9 +34,24 @@ public class LoginUI {
                 }
                 break;
             case 2: //For customer
-                System.out.println("hi there");
+                MovieGoer customer = new MovieGoer("Jack","34","cgui345",34,"62781245","JackTheman@hotmail.com");
+                System.out.println("username: ");
+                b = Bobj.nextLine();
+                System.out.println("password: ");
+                c = Cobj.nextLine();
+                System.out.println(customer.getUsername());
+                System.out.println(customer.getPw());
+                if(!customer.getUsername().equals(b) || !customer.getPw().equals(c)){
+                    System.out.println("Give valid username and password");
+                }
+                else{
+                    System.out.println();
+                    System.out.println("please continue!");
+                    MovieGoerUI.MovieGoerMain();
+                }
+                break;
              }
-            }while(a<0&&a>2);
+            }while(a==1||a==2);
             Aobj.close();
             Cobj.close();
             Bobj.close();

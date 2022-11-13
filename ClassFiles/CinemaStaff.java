@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.io.IOException;
-import java.net.PasswordAuthentication;
 import java.util.Objects;
 
 import enums.MovieStatus;

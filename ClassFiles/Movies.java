@@ -33,8 +33,9 @@ public class Movies implements Comparable<Movies>, Reviews{
         this.synopsis = synopsis;
         allReviews = new ArrayList<String>();
         allRatings = new ArrayList<Float>();        
-        allRatings.add(0.0f);
-        allRatings.add(2.0f);
+        allRatings.add(3.0f);
+        allRatings.add(2.3f);
+        allRatings.add(rating);
         allReviews.add("Met my expectations!");
         ScreenTimes = (ArrayList<Integer>)serializer.readSerializedObject("timings.dat");
         this.currentstatus = currentstatus;
@@ -81,7 +82,7 @@ public class Movies implements Comparable<Movies>, Reviews{
         for(float i: allRatings){
             sum += i;
         }
-        rating = sum/allRatings.size();
+        rating = sum/(allRatings.size());
     }
 
     public void setReview(String review){

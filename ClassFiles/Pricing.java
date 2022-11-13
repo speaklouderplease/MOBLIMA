@@ -15,7 +15,7 @@ public class Pricing{
  */
   public static double getPrice(Days day,AgeGroup age,CinemaType cinema){
     
-    double finalPrice = 0;
+    double finalPrice = 9;
    //if day = fri sat sun holi, plus extra
    if (day == Days.FRIDAY || day == Days.SATURDAY || day == Days.SUNDAY){
     finalPrice = finalPrice + 3;

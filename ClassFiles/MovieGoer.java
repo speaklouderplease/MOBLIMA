@@ -8,11 +8,12 @@ public class MovieGoer extends User{
   private int age;
   private AgeGroup ageGroup;
   
-  public MovieGoer(String username, String password,int age,String mobileNumber,String emailAddress){
-    super(username,password);
+  public MovieGoer(String username, String lastname, String password,int age,String mobileNumber,String emailAddress){
+    super(username,lastname);
     this.age = age;
     this.mobileNumber = mobileNumber;
     this.emailAddress = emailAddress;
+    setPassword(password);
   }
   
   //get set
