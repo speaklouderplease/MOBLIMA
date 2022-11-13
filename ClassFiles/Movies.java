@@ -52,6 +52,10 @@ public class Movies implements Comparable<Movies>, Reviews{
         }
     }
 
+    
+    /** 
+     * @param timings
+     */
     public void setScreenTime(int timings){
         ScreenTimes.add(timings);
     }
@@ -63,6 +67,10 @@ public class Movies implements Comparable<Movies>, Reviews{
         return synopsis;
     }
     
+    
+    /** 
+     * @param p
+     */
     public void setSynopsis(String p){
         synopsis = p;
     }
@@ -79,6 +87,10 @@ public class Movies implements Comparable<Movies>, Reviews{
         }
     }
 
+    
+    /** 
+     * @param u
+     */
     public void setRating(float u){
         allRatings.add(u);
         float sum = 0;
@@ -88,6 +100,10 @@ public class Movies implements Comparable<Movies>, Reviews{
         rating = sum/(allRatings.size());
     }
 
+    
+    /** 
+     * @param review
+     */
     public void setReview(String review){
         allReviews.add(review);
     }

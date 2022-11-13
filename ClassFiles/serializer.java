@@ -9,6 +9,11 @@ import java.util.ArrayList;
  * Helper class to serialize data into binary format, storing it in .dat files.
  */
 public class serializer {
+	
+	/** 
+	 * @param filename
+	 * @return List
+	 */
 	public static List readSerializedObject(String filename) {
 		List pDetails = null;
 		FileInputStream fis = null;
@@ -29,6 +34,11 @@ public class serializer {
 		return pDetails;
 	}
 
+	
+	/** 
+	 * @param filename
+	 * @param list
+	 */
 	public static void writeSerializedObject(String filename, List list) {
 		FileOutputStream fos = null;
 		ObjectOutputStream out = null;

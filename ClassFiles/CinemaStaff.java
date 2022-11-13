@@ -30,6 +30,10 @@ public class CinemaStaff extends User{
             }
     }
 
+    
+    /** 
+     * @param Title
+     */
     public void checkMovie(String Title){
         Movies c = new Movies();
         String filename = "MoviesCatalogue.txt";

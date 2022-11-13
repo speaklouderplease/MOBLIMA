@@ -11,27 +11,51 @@ public class User extends Person{
   private UserType usertype;
   
   
+  
+  /** 
+   * @param password
+   */
   //get set
   public void setPassword(String password){
     this.password = password;
   }
   
+  
+  /** 
+   * @param username
+   */
   public void setUsername(String username){
     this.username = username;
   }
     
+  
+  /** 
+   * @param usertype
+   */
   public void setUserType(UserType usertype){
     this.usertype = usertype;
   }
 
+  
+  /** 
+   * @return UserType
+   */
   public UserType getUserType(){
     return this.usertype;
   }
 
+  
+  /** 
+   * @return String
+   */
   public String getUsername(){
     return username;
   }
 
+  
+  /** 
+   * @return String
+   */
   public String getPw(){
     return password;
   }

@@ -82,12 +82,25 @@ public class Booking {
 		showSeats();
 	}
 
+	
+	/** 
+	 * @param row1
+	 * @param col1
+	 * @param row2
+	 * @param col2
+	 */
 	public void book2Seat(int row1,int col1,int row2,int col2){
 		seats[row1][col1]="[B]";
 		seats[row2][col2]="[B]";
 		showSeats();
 	}
 	
+	
+	/** 
+	 * @param row
+	 * @param column
+	 * @return int
+	 */
 	public int checkSeatTaken(int row,int column){
 		if(seats[row][column].equals("[X]")){return 1;}
 		return 0;

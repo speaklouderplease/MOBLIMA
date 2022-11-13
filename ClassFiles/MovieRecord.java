@@ -15,6 +15,12 @@ public class MovieRecord {
    */
     public static final String SEPARATOR = "|";
 
+    
+    /** 
+     * @param filename
+     * @return ArrayList
+     * @throws IOException
+     */
     //reading
 	public static ArrayList readMovies(String filename) throws IOException {
 		// read String from text file
@@ -40,6 +46,12 @@ public class MovieRecord {
 			return alr ;
 	}
 
+  
+  /** 
+   * @param filename
+   * @param al
+   * @throws IOException
+   */
   // saving
 public static void saveMovies(String filename, List al) throws IOException {
 		List<String> alw = new ArrayList<String>() ;// to store movies data

@@ -2,7 +2,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 public class Sorting implements Comparable<Sorting>{
 
-    public static void insertionSort (Comparable<Sorting>[] list)
+    
+	/** 
+	 * @param list
+	 */
+	public static void insertionSort (Comparable<Sorting>[] list)
 	{
 		for (int index = 1; index < list.length; index++)
 		{
@@ -39,7 +43,12 @@ public class Sorting implements Comparable<Sorting>{
 		}
 	}
 
-    @Override
+    
+	/** 
+	 * @param list
+	 * @return int
+	 */
+	@Override
 	public int compareTo(Sorting list){
 			if(this.compareTo(list) != 0){
 				return this.compareTo(list);

@@ -19,32 +19,60 @@ public class MovieGoer extends User{
     setPassword(password);
   }
   
+  
+  /** 
+   * @return String
+   */
   //get set
   public String getemailAddress(){
     return this.emailAddress;
   }
+  
+  /** 
+   * @param emailAddress
+   */
   public void setemailAddress(String emailAddress){
     this.emailAddress = emailAddress;
   }
   
+  
+  /** 
+   * @return String
+   */
   public String getmobileNumber(){
     return this.mobileNumber;
   }
   
+  
+  /** 
+   * @param mobileNumber
+   */
   public void setmobileNumber(String mobileNumber){
     this.mobileNumber = mobileNumber;
   }
   
+  
+  /** 
+   * @param age
+   */
   //age and sort into agegroup
   
   public void setAge(int age){
     this.age = age;
   }
   
+  
+  /** 
+   * @return int
+   */
   public int getAge(){
     return this.age;
   }
   
+  
+  /** 
+   * @param age
+   */
   public void setageGroup(int age){
     this.age = age;
     if (age<18){
@@ -58,6 +86,10 @@ public class MovieGoer extends User{
       }
   }
   
+  
+  /** 
+   * @return AgeGroup
+   */
   public AgeGroup getAgeGroup(){
     return this.ageGroup;
   }

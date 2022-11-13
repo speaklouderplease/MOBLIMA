@@ -18,20 +18,36 @@ public class MovieTicket{
       this.showTime = showTime;
     }
   
+  
+  /** 
+   * @return int
+   */
   //get
   
     public int getticketID(){
       return this.ticketID;
     }
   
+    
+    /** 
+     * @return int
+     */
     public int getseatNumber(){
       return this.seatNumber;
     }
       
+    
+    /** 
+     * @return int
+     */
     public int getticketPrice(){
       return this.ticketPrice;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getdate(){
       return this.date;
     }

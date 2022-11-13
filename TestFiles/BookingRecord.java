@@ -14,6 +14,12 @@ import java.util.StringTokenizer;
 public class BookingRecord {
     public static final String SEPARATOR = " | ";
 
+    
+    /** 
+     * @param filename
+     * @return ArrayList
+     * @throws IOException
+     */
     public static ArrayList readBooking(String filename) throws IOException {
 		// read String from text file
 		ArrayList stringArray = (ArrayList)read(filename);
@@ -31,6 +37,12 @@ public class BookingRecord {
 			return booking ;
 	}
 
+    
+    /** 
+     * @param filename
+     * @param booklist
+     * @throws IOException
+     */
     public static void saveBooking(String filename, List booklist) throws IOException {
 		List alw = new ArrayList<String>() ;// to store booking data
 
