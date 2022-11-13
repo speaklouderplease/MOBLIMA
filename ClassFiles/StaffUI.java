@@ -2,6 +2,7 @@ import java.util.Scanner;
 import enums.MovieStatus;
 public class StaffUI {
     /**
+     * @author Justin Seah
      * Allows the staff member to make changes to the system after login.
      */
     public static void StaffMain(){

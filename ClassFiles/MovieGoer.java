@@ -1,6 +1,9 @@
 import enums.AgeGroup;
 
-
+/**
+ * @author Ang Teck Yee
+ * Contains essential information of the customer of the theatre and allows setting and getting of personal information
+ */
 public class MovieGoer extends User{
   //members
   private String mobileNumber;

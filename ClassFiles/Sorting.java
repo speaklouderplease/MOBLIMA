@@ -17,7 +17,12 @@ public class Sorting implements Comparable<Sorting>{
 				list[position] = key;
 		}
 	}
-
+/**
+ * 
+ * @param list
+ * @see Movies.java
+ * Does insertion sort algorithm on a ArrayList of movies. This implements the compareTo method and the details are in Movies.java
+ */
     public static void insertionSort (ArrayList<Movies> list)
 	{
 		for (int index = 1; index < list.size(); index++)

@@ -1,6 +1,9 @@
 import enums.MovieStatus;
 import java.util.ArrayList;
-
+/**
+ * @author Justin Seah
+ * Contains all attributes and methods for Movie objects such as Title, set/get methods
+ */
 public class Movies implements Comparable<Movies>, Reviews{
     public String MovieTitle;
     public String Director;
@@ -108,6 +111,10 @@ public class Movies implements Comparable<Movies>, Reviews{
         System.out.println();
     }
 
+    /**
+     * @see Sorting,java
+     * Overrides the compareTo method of the Comparable class and sorts movie objects according to aggregate rating score
+     */
     @Override
     public int compareTo(Movies m){
 		if(this.getrating() > m.getrating()){

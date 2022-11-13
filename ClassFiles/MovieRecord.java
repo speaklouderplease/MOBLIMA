@@ -9,6 +9,10 @@ import java.util.StringTokenizer;
 import enums.MovieStatus;
 
 public class MovieRecord {
+  /**
+   * 
+   * Helper class to store data into .txt format
+   */
     public static final String SEPARATOR = "|";
 
     //reading

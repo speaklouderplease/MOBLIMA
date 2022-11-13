@@ -2,11 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.IOException;
 import java.util.Objects;
-
 import enums.MovieStatus;
 import java.util.Collections;
 import enums.UserType;
 /**
+ * @author Justin Seah
+ * Provides the methods and object instantiation which the staff member requires to make changes to the system.
  * Required classes: MovieRecord,Movies,MovieStatus
  */
 public class CinemaStaff extends User{

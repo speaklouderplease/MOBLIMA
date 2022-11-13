@@ -1,4 +1,6 @@
-
+/**
+ * super class of cinema staff and moviegoer 
+ */
 import enums.UserType;
 public class User extends Person{
   

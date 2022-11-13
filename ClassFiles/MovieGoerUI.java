@@ -3,7 +3,11 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.io.IOException;
 import java.util.*;
-  
+
+/**
+ * @author Ang Teck Yee
+ * Provide the menu for the customer to use the system after logging in.
+ */
 public class MovieGoerUI{
   public static void MovieGoerMain(){
     MovieGoer customer = new MovieGoer("Jack","34","cgui345",34,"62781245","JackTheman@hotmail.com");

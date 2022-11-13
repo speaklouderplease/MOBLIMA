@@ -5,7 +5,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.List;
 import java.util.ArrayList;
-
+/**
+ * Helper class to serialize data into binary format, storing it in .dat files.
+ */
 public class serializer {
 	public static List readSerializedObject(String filename) {
 		List pDetails = null;

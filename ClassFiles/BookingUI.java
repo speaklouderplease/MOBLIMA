@@ -150,6 +150,8 @@ public class BookingUI {
 		choices=picker.nextInt();
 		if(choices==1){type=CinemaType.REGULAR;}
 		else{type=CinemaType.PLATINUM;}
+		price = Pricing.getPrice(theDay,age,type);
+		System.out.println("Total price is "+price);
 		System.out.println("Please choose a seat. Input the row and then column of the seat you want");
 		screening1.showSeats();	
 		do{
@@ -163,8 +165,7 @@ public class BookingUI {
 				System.out.println("seat is taken, please choose another seat");
 			}
 		}while(!seatok);
-		price = Pricing.getPrice(theDay,age,type);
-		System.out.println("Total price is "+price);
+		
 		System.out.println("The booking was made on " + current.toString());
 	 	buff = location+films.MovieTitle+pickedcal.getTime().toString()+"$"+price;
 	 	buff = buff.replaceAll("\\s","");

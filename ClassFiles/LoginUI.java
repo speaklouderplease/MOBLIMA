@@ -1,5 +1,10 @@
 import java.util.Scanner;
 public class LoginUI {
+    /**
+     * @author Justin Seah
+     * @param args
+     * The first screen to appear when MOBLIMA is launch is here. From here customer and staff can log in to perform their respective function.
+     */
     public static void main(String args[]){
         int a=0;
         String c;
