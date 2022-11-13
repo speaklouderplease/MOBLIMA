@@ -17,7 +17,7 @@ public class StaffUI {
         System.out.println("3. add a new screening");
         System.out.println("4. remove a screening");
         System.out.println("5. change the status of a film");
-         System.out.println("6. change the synopsis of a film");
+        System.out.println("6. change the synopsis of a film");
         System.out.println("7. look up a movie");       
         System.out.println("8. logout");		
 		choice = picker.nextInt();
