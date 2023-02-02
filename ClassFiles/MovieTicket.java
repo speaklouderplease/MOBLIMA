@@ -1,4 +1,4 @@
-import
+
 
 public class MovieTicket{
   //members
@@ -24,7 +24,7 @@ public class MovieTicket{
       return this.ticketID;
     }
   
-    public int getseatNumber()
+    public int getseatNumber(){
       return this.seatNumber;
     }
       
@@ -33,8 +33,7 @@ public class MovieTicket{
     }
 
     public int getdate(){
-      return this.date
+      return this.date;
     }
-  
 }
   
