@@ -1,7 +1,10 @@
 import enums.MovieStatus;
 import java.util.ArrayList;
-
-public class Movies{
+/**
+ * @author Justin Seah
+ * Contains all attributes and methods for Movie objects such as Title, set/get methods
+ */
+public class Movies implements Comparable<Movies>, Reviews{
     public String MovieTitle;
     public String Director;
     public String Cast;
@@ -11,7 +14,11 @@ public class Movies{
     private ArrayList<Float> allRatings;
     private ArrayList<Integer> ScreenTimes;
     public MovieStatus currentstatus;
-    
+
+    /**
+     * Default constructor
+     */
+    public Movies(){};
     /**
      * 
      * @param title
@@ -29,25 +36,26 @@ public class Movies{
         this.synopsis = synopsis;
         allReviews = new ArrayList<String>();
         allRatings = new ArrayList<Float>();        
-        allRatings.add(0.0f);
-        allRatings.add(2.0f);
+        allRatings.add(3.0f);
+        allRatings.add(2.3f);
+        allRatings.add(rating);
         allReviews.add("Met my expectations!");
-        ScreenTimes.add(10);
-        ScreenTimes.add(13);
-        ScreenTimes.add(15);
-        ScreenTimes.add(17);
-        ScreenTimes.add(19);
-        ScreenTimes.add(22);
+        ScreenTimes = (ArrayList<Integer>)serializer.readSerializedObject("timings.dat");
         this.currentstatus = currentstatus;
     }
 
     public void getScreenTime(){
+        ScreenTimes = (ArrayList<Integer>)serializer.readSerializedObject("timings.dat");
         System.out.println("Avaliable showtimes: ");
         for(int i:ScreenTimes){
             System.out.println(i+":00");
         }
     }
 
+    
+    /** 
+     * @param timings
+     */
     public void setScreenTime(int timings){
         ScreenTimes.add(timings);
     }
@@ -59,11 +67,45 @@ public class Movies{
         return synopsis;
     }
     
+    
+    /** 
+     * @param p
+     */
+    public void setSynopsis(String p){
+        synopsis = p;
+    }
     /** 
      * @return provide the aggregate rating
      */
     public float getrating(){
         return rating;
+    }
+
+    public void getReview(){
+        for(int i=0;i<allReviews.size();i++){
+            System.out.println(i+":"+allReviews.get(i));
+        }
+    }
+
+    
+    /** 
+     * @param u
+     */
+    public void setRating(float u){
+        allRatings.add(u);
+        float sum = 0;
+        for(float i: allRatings){
+            sum += i;
+        }
+        rating = sum/(allRatings.size());
+    }
+
+    
+    /** 
+     * @param review
+     */
+    public void setReview(String review){
+        allReviews.add(review);
     }
 
     /**
@@ -82,5 +124,18 @@ public class Movies{
         System.out.println("<-------Summary------->");
         System.out.println(getSynopsis());
         System.out.println(currentstatus);
+        System.out.println();
     }
+
+    /**
+     * @see Sorting,java
+     * Overrides the compareTo method of the Comparable class and sorts movie objects according to aggregate rating score
+     */
+    @Override
+    public int compareTo(Movies m){
+		if(this.getrating() > m.getrating()){
+            return 1;
+        }
+        else {return -1;}
+    } 
 }

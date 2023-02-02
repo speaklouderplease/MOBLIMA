@@ -8,12 +8,20 @@ public class Person{
     this.lastName = lastName;
   }
   
+  
+  /** 
+   * @return String
+   */
   //methods
   
   public String getFirstName(){
     return this.firstName;
   }
   
+  
+  /** 
+   * @return String
+   */
   public String getlastName(){
     return this.lastName;
   }

@@ -2,6 +2,7 @@
 
 public class MovieTicket{
   //members
+  private int cinemaID;
   private int ticketID;
   private int seatNumber;
   private int ticketPrice;
@@ -18,22 +19,35 @@ public class MovieTicket{
       this.showTime = showTime;
     }
   
+  
+  /** 
+   * @return int
+   */
   //get
   
     public int getticketID(){
       return this.ticketID;
     }
   
-    public int getseatNumber(){
+    public int getseatNumber()
       return this.seatNumber;
     }
       
+    
+    /** 
+     * @return int
+     */
     public int getticketPrice(){
       return this.ticketPrice;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getdate(){
-      return this.date;
+      return this.date
     }
+  
 }
   

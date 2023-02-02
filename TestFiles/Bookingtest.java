@@ -13,7 +13,11 @@ import java.util.Scanner;
  * file if necessary. The .txt file must be created before and has to be contained inside the package.
  */
 public class Bookingtest {
-    static String movieBooking(){
+    
+	/** 
+	 * @return String
+	 */
+	static String movieBooking(){
         int choice = 0;
         String buff = "\0";
         //String screening = "record.txt";
