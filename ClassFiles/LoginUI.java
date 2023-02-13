@@ -6,29 +6,32 @@ public class LoginUI {
      * The first screen to appear when MOBLIMA is launch is here. From here customer and staff can log in to perform their respective function.
      */
     public static void main(String args[]){
-        int a=0;
+        String a;
         String c;
         String b;
         System.out.println("Welcome to Fortran Theatres");
         
         Scanner Aobj = new Scanner(System.in);
-        Scanner Cobj = new Scanner(System.in);
         Scanner Bobj = new Scanner(System.in);
-        System.out.println("Are you a staff or customer?");
-        System.out.println("1. staff");
-        System.out.println("2. customer");
-        System.out.println("3. Logout");
+        System.out.println("Are you a staff or customer? Input the letters");
+        System.out.println("a. staff");
+        System.out.println("b. customer");
+        System.out.println("c. Logout");
 
         do{
         System.out.println("Please login");
-        a = Aobj.nextInt();
+        //a=0;
+        if(!Aobj.hasNextInt()){
+            a = Aobj.nextLine();
+        }
+        else{a=Aobj.nextLine();}
         switch(a){
-            case 1: //For staff
+            case "a": //For staff
                 CinemaStaff tempstaff = new CinemaStaff("Tom","Hanks");
                 System.out.println("username: ");
                 b = Bobj.nextLine();
                 System.out.println("password: ");
-                c = Cobj.nextLine();              
+                c = Bobj.nextLine();              
                 if(!tempstaff.getUsername().equals(b) || !tempstaff.getPw().equals(c)){
                     System.out.println("Give valid username and password");
                 }
@@ -38,14 +41,14 @@ public class LoginUI {
                     StaffUI.StaffMain();
                 }
                 break;
-            case 2: //For customer
+            case "b": //For customer
                 MovieGoer customer = new MovieGoer("Jack","34","cgui345",34,"62781245","JackTheman@hotmail.com");
                 System.out.println("username: ");
                 b = Bobj.nextLine();
                 System.out.println("password: ");
-                c = Cobj.nextLine();
-                System.out.println(customer.getUsername());
-                System.out.println(customer.getPw());
+                c = Bobj.nextLine();
+                //System.out.println(customer.getUsername());
+                //System.out.println(customer.getPw());
                 if(!customer.getUsername().equals(b) || !customer.getPw().equals(c)){
                     System.out.println("Give valid username and password");
                 }
@@ -56,9 +59,11 @@ public class LoginUI {
                 }
                 break;
              }
-            }while(a==1||a==2);
-            Aobj.close();
-            Cobj.close();
-            Bobj.close();
+             a="c";
+            //Aobj.nextLine();
+            }while(a.equals("a")||a.equals("b"));
+        System.out.println("Sucessfully logged out, goodbye!");
+        Aobj.close();
+        Bobj.close();
     }
 }
