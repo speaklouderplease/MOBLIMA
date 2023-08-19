@@ -31,7 +31,8 @@ booking
 - In-built text parser helper functions reads from and writes to a text file that stores the relevant information about the movie.
 These are contained within the MovieRecord class. No external database nor JSON/XML used.
 - Simpler to write but difficult to extend movie attributes.
-Snippet of function to parse from text file and creating the movie object
+<details>
+<summary> Snippet of function to parse from text file and creating the movie object </summary>
 ```java
     /** 
      * @param filename
@@ -62,6 +63,7 @@ Snippet of function to parse from text file and creating the movie object
 			return alr ;
 	}
 ```
-  
-Report
-https://docs.google.com/document/d/1mFtcWWyKjnIt-P3WChLilIud6iN8iO1GSYjNRmzgCBA/edit?usp=sharing
+</details>
+
+[Google Docs Report]
+(https://docs.google.com/document/d/1mFtcWWyKjnIt-P3WChLilIud6iN8iO1GSYjNRmzgCBA/edit?usp=sharing)
