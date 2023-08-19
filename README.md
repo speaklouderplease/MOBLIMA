@@ -65,5 +65,4 @@ These are contained within the MovieRecord class. No external database nor JSON/
 ```
 </details>
 
-[Google Docs Report]
-(https://docs.google.com/document/d/1mFtcWWyKjnIt-P3WChLilIud6iN8iO1GSYjNRmzgCBA/edit?usp=sharing)
+[Google Docs Report](https://docs.google.com/document/d/1mFtcWWyKjnIt-P3WChLilIud6iN8iO1GSYjNRmzgCBA/edit?usp=sharing)
