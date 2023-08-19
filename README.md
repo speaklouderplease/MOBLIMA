@@ -32,37 +32,36 @@ booking
 These are contained within the MovieRecord class. No external database nor JSON/XML used.
 - Simpler to write but difficult to extend movie attributes.
 <details>
+	
 <summary> Snippet of function to parse from text file and creating the movie object </summary>
+
 ```java
     /** 
      * @param filename
      * @return ArrayList
      * @throws IOException
      */
-    //reading
 	public static ArrayList readMovies(String filename) throws IOException {
 		// read String from text file
-		ArrayList stringArray = (ArrayList)read(filename);
+		ArrayList stringArray = (ArrayList)read(filename);	//reads filename.txt
 		ArrayList<Movies> alr = new ArrayList<Movies>() ;// to store Movie data
-
-        for (int i = 0 ; i < stringArray.size() ; i++) {
-				String st = (String)stringArray.get(i);
-				// get individual 'fields' of the string separated by SEPARATOR
-				StringTokenizer star = new StringTokenizer(st , SEPARATOR);	// pass in the string to the string tokenizer using delimiter ","
-				String  title = star.nextToken().trim();	
-				String  direct = star.nextToken().trim();	
-        String cast = star.nextToken().trim();
-				float rating = Float.parseFloat(star.nextToken().trim());
-        String synopsis = star.nextToken().trim();
-				String currentstatusString = star.nextToken().trim();
-        MovieStatus currentstatus = MovieStatus.valueOf(currentstatusString);
-        Movies film = new Movies(title,direct,cast,rating,synopsis,currentstatus);
-				// add to Movies list
-				alr.add(film) ;
+        	for (int i = 0 ; i < stringArray.size() ; i++) {
+			String st = (String)stringArray.get(i);		// get individual 'fields' of the string separated by SEPARATOR
+			StringTokenizer star = new StringTokenizer(st , SEPARATOR);	// pass in the string to the string tokenizer using delimiter ","
+			String  title = star.nextToken().trim();	
+			String  direct = star.nextToken().trim();	
+       		 	String cast = star.nextToken().trim();
+			float rating = Float.parseFloat(star.nextToken().trim());
+        		String synopsis = star.nextToken().trim();
+			String currentstatusString = star.nextToken().trim();
+        		MovieStatus currentstatus = MovieStatus.valueOf(currentstatusString);
+        		Movies film = new Movies(title,direct,cast,rating,synopsis,currentstatus);	
+			alr.add(film) ; // add to Movies list
 			}
 			return alr ;
 	}
 ```
+
 </details>
 
 [Google Docs Report](https://docs.google.com/document/d/1mFtcWWyKjnIt-P3WChLilIud6iN8iO1GSYjNRmzgCBA/edit?usp=sharing)
